@@ -5,7 +5,7 @@ function component() {
     const element = document.createElement('div');
  
 
-    element.innerHTML = add(1,1);
+    element.innerHTML = add(1,1).toString();
  
     return element;
 }
