@@ -1,4 +1,5 @@
 import add from './add';
+import '../public/index.scss';
 
 function component() {
     const element = document.createElement('div');
