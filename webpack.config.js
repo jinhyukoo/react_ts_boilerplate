@@ -16,16 +16,16 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: path.resolve(__dirname, './public/index.html'),
-    }),  
+    }),
   ],
   module: {
     rules: [
       {
         test: /\.s[ac]ss$/i,
         use: [
-          "style-loader",
-          "css-loader",
-          "sass-loader",
+          'style-loader',
+          'css-loader',
+          'sass-loader',
         ],
       },
       {
@@ -33,22 +33,22 @@ module.exports = {
         use: {
           loader: 'html-loader',
           options: {
-            minimize: true
-          }
-        }
+            minimize: true,
+          },
+        },
       },
       {
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: /node_modules/,
-      }
+      },
     ],
   },
   resolve: {
-      extensions: ['.tsx', '.ts', '.jsx', '.js'],
-      alias: {
-        '@': path.resolve(__dirname, 'src/'),
-        '@public': path.resolve(__dirname, 'public/')
-      }
-  }
+    extensions: ['.tsx', '.ts', '.jsx', '.js'],
+    alias: {
+      '@': path.resolve(__dirname, 'src/'),
+      '@public': path.resolve(__dirname, 'public/'),
+    },
+  },
 };
