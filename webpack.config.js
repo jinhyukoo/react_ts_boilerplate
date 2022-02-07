@@ -1,8 +1,10 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const isDevMode = process.env.NODE_ENV !== 'production';
+
 module.exports = {
-  mode: 'development',
+  mode: isDevMode ? 'development' : 'production',
   entry: './src/index.tsx',
   output: {
     filename: 'bundle.js',
