@@ -1,10 +1,16 @@
 import React from 'react';
+import { Outlet, Link } from 'react-router-dom';
 import Greetings from '@/components/Greetings';
 
 function App() {
   return (
     <div className="App">
       <Greetings name="jinhyukoo" />
+      <nav>
+        <Link to="/page1">page1</Link>
+        <Link to="/page2">page2</Link>
+      </nav>
+      <Outlet />
     </div>
   );
 }
