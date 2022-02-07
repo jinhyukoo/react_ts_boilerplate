@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const isDevMode = process.env.NODE_ENV !== 'production';
 
@@ -19,12 +20,16 @@ module.exports = {
       filename: 'index.html',
       template: path.resolve(__dirname, './public/index.html'),
     }),
-  ],
+  ].concat(isDevMode ? [] : [new MiniCssExtractPlugin()]),
   module: {
     rules: [
       {
         test: /\.s[ac]ss$/i,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: [
+          isDevMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader',
+        ],
       },
       {
         test: /\.html$/i,
