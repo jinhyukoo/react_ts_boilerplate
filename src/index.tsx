@@ -4,7 +4,7 @@ import '../public/index.scss';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from '@/App';
-import { store } from './app/store';
+import { store } from './store';
 import Page1 from '@/pages/Page1';
 import Page2 from '@/pages/Page2';
 import Invoice from './routes/invoice';
