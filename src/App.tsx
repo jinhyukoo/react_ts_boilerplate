@@ -1,6 +1,7 @@
 import React from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import Greetings from '@/components/Greetings';
+import Counter from '@/components/Counter';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Link to="/page1/2">Page ID2</Link>
       </nav>
       <Outlet />
+      <Counter />
     </div>
   );
 }
