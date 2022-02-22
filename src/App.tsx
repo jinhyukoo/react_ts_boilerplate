@@ -2,6 +2,7 @@ import React from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import Greetings from '@/components/Greetings';
 import Counter from '@/components/Counter';
+import Pokemon from '@/components/Pokemon';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       </nav>
       <Outlet />
       <Counter />
+      <Pokemon />
     </div>
   );
 }
